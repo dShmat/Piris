@@ -1,5 +1,6 @@
 package by.shmat.lab1.dao;
 
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -9,7 +10,7 @@ import java.util.List;
 
 import by.shmat.lab1.entity.Nationality;
 
-
+@Dao
 public interface NationalityDao {
     @Query("SELECT * FROM nationality")
     List<Nationality> getAll();
