@@ -3,5 +3,6 @@
 
     <string name="empty_edit_field">Error or empty!</string>
     <string name="same_city_err">There is city with same name!</string>
+    <string name="same_nationality_err">There is the same nationality!</string>
     <string name="add_point_menu">Add new</string>
 </resources>

@@ -15,15 +15,15 @@ import android.view.View;
 import java.util.List;
 
 import by.shmat.clienstmodule.R;
-import by.shmat.clienstmodule.adapter.CityListAdapter;
-import by.shmat.clienstmodule.database.City;
+import by.shmat.clienstmodule.adapter.NationalityListAdapter;
+import by.shmat.clienstmodule.database.Nationality;
 
-public class CityListActivity extends AppCompatActivity implements View.OnClickListener {
+public class NationalityListActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RecyclerView cityRecycleView;
+    private RecyclerView nationalityRecycleView;
     private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter cityListAdapter;
-    private List<City> cityList;
+    private RecyclerView.Adapter nationalityListAdapter;
+    private List<Nationality> nationalityList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,19 +33,19 @@ public class CityListActivity extends AppCompatActivity implements View.OnClickL
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("City");
+            actionBar.setTitle("Nationality");
         }
-        cityRecycleView = (RecyclerView) findViewById(R.id.simple_list);
+        nationalityRecycleView = (RecyclerView) findViewById(R.id.simple_list);
 
         layoutManager = new LinearLayoutManager(this);
-        cityRecycleView.setLayoutManager(layoutManager);
+        nationalityRecycleView.setLayoutManager(layoutManager);
 
-        cityList = City.listAll(City.class);
-        cityListAdapter = new CityListAdapter(cityList, this);
-        cityRecycleView.setAdapter(cityListAdapter);
+        nationalityList = Nationality.listAll(Nationality.class);
+        nationalityListAdapter = new NationalityListAdapter(nationalityList, this);
+        nationalityRecycleView.setAdapter(nationalityListAdapter);
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 2);
-        cityList = City.listAll(City.class);
+        nationalityList = Nationality.listAll(Nationality.class);
 
     }
 
@@ -64,8 +64,8 @@ public class CityListActivity extends AppCompatActivity implements View.OnClickL
                 this.finish();
                 return true;
             case R.id.new_city:
-                Intent cityListIntent = new Intent(this, CreateCityActivity.class);
-                startActivity(cityListIntent);
+                Intent nationalityListIntent = new Intent(this, CreateNationalityActivity.class);
+                startActivity(nationalityListIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -73,9 +73,9 @@ public class CityListActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void updateAdapter() {
-        cityList = City.listAll(City.class);
-        cityListAdapter = new CityListAdapter(cityList, this);
-        cityRecycleView.setAdapter(cityListAdapter);
+        nationalityList = Nationality.listAll(Nationality.class);
+        nationalityListAdapter = new NationalityListAdapter(nationalityList, this);
+        nationalityRecycleView.setAdapter(nationalityListAdapter);
     }
 
     @Override

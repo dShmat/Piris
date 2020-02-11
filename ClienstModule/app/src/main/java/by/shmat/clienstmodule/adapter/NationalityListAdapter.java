@@ -12,16 +12,16 @@ import android.widget.TextView;
 import java.util.List;
 
 import by.shmat.clienstmodule.R;
-import by.shmat.clienstmodule.database.City;
+import by.shmat.clienstmodule.database.Nationality;
 
-public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.CatalogViewHolder> {
+public class NationalityListAdapter extends RecyclerView.Adapter<CityListAdapter.CatalogViewHolder> {
 
-    private List<City> cityList;
+    private List<Nationality> nationalityList;
     private LayoutInflater inflater;
     private Context context;
 
-    public CityListAdapter(List<City> cityList, Context context) {
-        this.cityList = cityList;
+    public NationalityListAdapter(List<Nationality> nationalityList, Context context) {
+        this.nationalityList = nationalityList;
         this.inflater = LayoutInflater.from(context);
         this.context = context;
     }
@@ -35,9 +35,9 @@ public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.Catalo
 
     @Override
     public void onBindViewHolder(@NonNull final CityListAdapter.CatalogViewHolder catalogViewHolder, int position) {
-        final City city = cityList.get(position);
+        final Nationality nationality = nationalityList.get(position);
 
-        catalogViewHolder.nameView.setText(city.getName());
+        catalogViewHolder.nameView.setText(nationality.getName());
         catalogViewHolder.parentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +49,7 @@ public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.Catalo
 
     @Override
     public int getItemCount() {
-        return cityList.size();
+        return nationalityList.size();
     }
 
     public static class CatalogViewHolder extends RecyclerView.ViewHolder {

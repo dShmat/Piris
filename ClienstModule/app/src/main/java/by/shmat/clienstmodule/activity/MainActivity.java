@@ -23,14 +23,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-        ((Button) findViewById(R.id.but_create_city)).setOnClickListener(this);
-        newCityName = (EditText) findViewById(R.id.edit_city_name);
+        ((Button) findViewById(R.id.but_go_city)).setOnClickListener(this);
+        ((Button) findViewById(R.id.but_go_disability)).setOnClickListener(this);
+        ((Button) findViewById(R.id.but_go_family_posirion)).setOnClickListener(this);
+        ((Button) findViewById(R.id.but_go_nationality)).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.but_create_city:
+            case R.id.but_go_city:
+                startActivity(new Intent(this, CityListActivity.class));
+                break;
+            case R.id.but_go_disability:
+                startActivity(new Intent(this, NationalityListActivity.class));
+                break;
+            case R.id.but_go_family_posirion:
+                startActivity(new Intent(this, CityListActivity.class));
+                break;
+            case R.id.but_go_nationality:
                 startActivity(new Intent(this, CityListActivity.class));
                 break;
         }

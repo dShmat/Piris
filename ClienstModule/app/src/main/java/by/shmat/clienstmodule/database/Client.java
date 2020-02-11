@@ -1,8 +1,10 @@
 package by.shmat.clienstmodule.database;
 
+import com.orm.SugarRecord;
+
 import java.time.Instant;
 
-public class Client {
+public class Client extends SugarRecord {
 
     private String surname;
 

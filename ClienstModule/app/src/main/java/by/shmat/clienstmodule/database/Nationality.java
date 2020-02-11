@@ -1,6 +1,8 @@
 package by.shmat.clienstmodule.database;
 
-public class Nationality {
+import com.orm.SugarRecord;
+
+public class Nationality extends SugarRecord {
 
     private String name;
 
