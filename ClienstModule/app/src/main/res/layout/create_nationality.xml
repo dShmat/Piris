@@ -9,13 +9,13 @@
         android:id="@+id/edit_nationality_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nationality Name"/>
+        android:hint="@string/add_nationality_hint" />
 
     <Button
         android:id="@+id/but_create_nationality"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add nationality" />
+        android:text="@string/add_nationality_button" />
 
 
 </LinearLayout>

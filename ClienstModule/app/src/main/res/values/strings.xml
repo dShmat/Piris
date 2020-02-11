@@ -1,5 +1,20 @@
 <resources>
-    <string name="app_name">ClienstModule</string>
+    <string name="app_name">ClientModule</string>
+
+    <string name="new_city">New City</string>
+    <string name="cities">Cities</string>
+    <string name="add_city_hint">City Name</string>
+    <string name="add_city_button">Add city</string>
+
+    <string name="new_nationality">New Nationality</string>
+    <string name="nationalities">Nationalities</string>
+    <string name="add_nationality_hint">Nationality Name</string>
+    <string name="add_nationality_button">Add nationality</string>
+
+    <string name="new_disability">New Disability</string>
+    <string name="disabilities">Disabilities</string>
+    <string name="add_disability_hint">Disability Name</string>
+    <string name="add_disability_button">Add disability</string>
 
     <string name="empty_edit_field">Error or empty!</string>
     <string name="same_city_err">There is city with same name!</string>

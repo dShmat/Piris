@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import by.shmat.clienstmodule.R;
+import by.shmat.clienstmodule.database.Disability;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ((Button) findViewById(R.id.but_go_city)).setOnClickListener(this);
         ((Button) findViewById(R.id.but_go_disability)).setOnClickListener(this);
-        ((Button) findViewById(R.id.but_go_family_posirion)).setOnClickListener(this);
+        ((Button) findViewById(R.id.but_go_family_position)).setOnClickListener(this);
         ((Button) findViewById(R.id.but_go_nationality)).setOnClickListener(this);
     }
 
@@ -36,13 +37,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, CityListActivity.class));
                 break;
             case R.id.but_go_disability:
-                startActivity(new Intent(this, NationalityListActivity.class));
+                startActivity(new Intent(this, DisabilityListActivity.class));
                 break;
-            case R.id.but_go_family_posirion:
+            case R.id.but_go_family_position:
                 startActivity(new Intent(this, CityListActivity.class));
                 break;
             case R.id.but_go_nationality:
-                startActivity(new Intent(this, CityListActivity.class));
+                startActivity(new Intent(this, NationalityListActivity.class));
                 break;
         }
     }

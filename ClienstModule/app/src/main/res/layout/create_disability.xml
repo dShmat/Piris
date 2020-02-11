@@ -6,16 +6,16 @@
 
 
     <EditText
-        android:id="@+id/edit_city_name"
+        android:id="@+id/edit_disability_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/add_city_hint"/>
+        android:hint="@string/add_disability_hint"/>
 
     <Button
-        android:id="@+id/but_create_city"
+        android:id="@+id/but_create_disability"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_city_button" />
+        android:text="@string/add_disability_button" />
 
 
 </LinearLayout>

@@ -21,6 +21,8 @@
         <activity android:name=".activity.CreateCityActivity"></activity>
         <activity android:name=".activity.NationalityListActivity"></activity>
         <activity android:name=".activity.CreateNationalityActivity"></activity>
+        <activity android:name=".activity.CreateDisabilityActivity"></activity>
+        <activity android:name=".activity.DisabilityListActivity"></activity>
     </application>
 
 </manifest>

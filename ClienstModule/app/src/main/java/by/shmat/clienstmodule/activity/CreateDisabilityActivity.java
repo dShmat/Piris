@@ -11,11 +11,11 @@ import android.widget.EditText;
 import java.util.List;
 
 import by.shmat.clienstmodule.R;
-import by.shmat.clienstmodule.database.Nationality;
+import by.shmat.clienstmodule.database.Disability;
 
-public class CreateNationalityActivity extends AppCompatActivity implements View.OnClickListener {
+public class CreateDisabilityActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText newNationalityName;
+    private EditText newDisabilityName;
 
     public static boolean isEmpty(String str) {
         return str == null || "".equals(str.trim());
@@ -24,46 +24,46 @@ public class CreateNationalityActivity extends AppCompatActivity implements View
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.create_nationality);
+        setContentView(R.layout.create_disability);
 
-        ((Button) findViewById(R.id.but_create_nationality)).setOnClickListener(this);
-        newNationalityName = (EditText) findViewById(R.id.edit_nationality_name);
+        ((Button) findViewById(R.id.but_create_disability)).setOnClickListener(this);
+        newDisabilityName = (EditText) findViewById(R.id.edit_disability_name);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle(getResources().getString(R.string.new_nationality));
+            actionBar.setTitle(getResources().getString(R.string.new_disability));
         }
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.but_create_nationality:
-                saveNationality();
+            case R.id.but_create_disability:
+                saveDisability();
                 break;
         }
     }
 
-    private void saveNationality() {
-        String name = newNationalityName.getText().toString().trim();
+    private void saveDisability() {
+        String name = newDisabilityName.getText().toString().trim();
         if (isEmpty(name))
-            newNationalityName.setError(getResources().getString(R.string.empty_edit_field));
+            newDisabilityName.setError(getResources().getString(R.string.empty_edit_field));
         else {
-            List<Nationality> nationalities = Nationality.listAll(Nationality.class);
+            List<Disability> disabilities = Disability.listAll(Disability.class);
             boolean flag = false;
-            for (Nationality nationality : nationalities) {
-                String prod = nationality.getName().toLowerCase();
+            for (Disability disability : disabilities) {
+                String prod = disability.getName().toLowerCase();
                 if (prod.equals(name.toLowerCase()))
                     flag = true;
             }
             if (!flag) {
-                Nationality nationality;
-                nationality = new Nationality(name);
-                nationality.save();
+                Disability disability;
+                disability = new Disability(name);
+                disability.save();
                 finish();
             } else
-                newNationalityName.setError(getResources().getString(R.string.same_nationality_err));
+                newDisabilityName.setError(getResources().getString(R.string.same_nationality_err));
         }
 
     }

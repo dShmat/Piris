@@ -32,7 +32,7 @@ public class CreateCityActivity extends AppCompatActivity implements View.OnClic
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("New City");
+            actionBar.setTitle(getResources().getString(R.string.new_city));
         }
     }
 

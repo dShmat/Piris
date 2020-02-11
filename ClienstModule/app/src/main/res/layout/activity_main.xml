@@ -17,7 +17,7 @@
         android:text="Go to disability" />
 
     <Button
-        android:id="@+id/but_go_family_posirion"
+        android:id="@+id/but_go_family_position"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Go to family posirion" />

@@ -33,7 +33,7 @@ public class NationalityListActivity extends AppCompatActivity implements View.O
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("Nationality");
+            actionBar.setTitle(getResources().getString(R.string.nationalities));
         }
         nationalityRecycleView = (RecyclerView) findViewById(R.id.simple_list);
 
@@ -44,7 +44,6 @@ public class NationalityListActivity extends AppCompatActivity implements View.O
         nationalityListAdapter = new NationalityListAdapter(nationalityList, this);
         nationalityRecycleView.setAdapter(nationalityListAdapter);
 
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 2);
         nationalityList = Nationality.listAll(Nationality.class);
 
     }

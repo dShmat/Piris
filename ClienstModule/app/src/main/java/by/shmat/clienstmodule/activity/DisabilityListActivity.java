@@ -15,15 +15,15 @@ import android.view.View;
 import java.util.List;
 
 import by.shmat.clienstmodule.R;
-import by.shmat.clienstmodule.adapter.CityListAdapter;
-import by.shmat.clienstmodule.database.City;
+import by.shmat.clienstmodule.adapter.DisabilityListAdapter;
+import by.shmat.clienstmodule.database.Disability;
 
-public class CityListActivity extends AppCompatActivity implements View.OnClickListener {
+public class DisabilityListActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RecyclerView cityRecycleView;
+    private RecyclerView disabilityRecycleView;
     private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter cityListAdapter;
-    private List<City> cityList;
+    private RecyclerView.Adapter disabilityListAdapter;
+    private List<Disability> disabilityList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,18 +33,18 @@ public class CityListActivity extends AppCompatActivity implements View.OnClickL
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle(getResources().getString(R.string.cities));
+            actionBar.setTitle(getResources().getString(R.string.disabilities));
         }
-        cityRecycleView = (RecyclerView) findViewById(R.id.simple_list);
+        disabilityRecycleView = (RecyclerView) findViewById(R.id.simple_list);
 
         layoutManager = new LinearLayoutManager(this);
-        cityRecycleView.setLayoutManager(layoutManager);
+        disabilityRecycleView.setLayoutManager(layoutManager);
 
-        cityList = City.listAll(City.class);
-        cityListAdapter = new CityListAdapter(cityList, this);
-        cityRecycleView.setAdapter(cityListAdapter);
+        disabilityList = Disability.listAll(Disability.class);
+        disabilityListAdapter = new DisabilityListAdapter(disabilityList, this);
+        disabilityRecycleView.setAdapter(disabilityListAdapter);
 
-        cityList = City.listAll(City.class);
+        disabilityList = Disability.listAll(Disability.class);
 
     }
 
@@ -63,8 +63,8 @@ public class CityListActivity extends AppCompatActivity implements View.OnClickL
                 this.finish();
                 return true;
             case R.id.new_city:
-                Intent cityListIntent = new Intent(this, CreateCityActivity.class);
-                startActivity(cityListIntent);
+                Intent disabilityListIntent = new Intent(this, CreateDisabilityActivity.class);
+                startActivity(disabilityListIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -72,9 +72,9 @@ public class CityListActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void updateAdapter() {
-        cityList = City.listAll(City.class);
-        cityListAdapter = new CityListAdapter(cityList, this);
-        cityRecycleView.setAdapter(cityListAdapter);
+        disabilityList = Disability.listAll(Disability.class);
+        disabilityListAdapter = new DisabilityListAdapter(disabilityList, this);
+        disabilityRecycleView.setAdapter(disabilityListAdapter);
     }
 
     @Override
