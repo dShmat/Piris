@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -15,15 +14,15 @@ import android.view.View;
 import java.util.List;
 
 import by.shmat.clienstmodule.R;
-import by.shmat.clienstmodule.adapter.NationalityListAdapter;
-import by.shmat.clienstmodule.database.Nationality;
+import by.shmat.clienstmodule.adapter.FamilyListAdapter;
+import by.shmat.clienstmodule.database.FamilyPosition;
 
-public class NationalityListActivity extends AppCompatActivity implements View.OnClickListener {
+public class FamilyListActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RecyclerView nationalityRecycleView;
+    private RecyclerView familyRecycleView;
     private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter nationalityListAdapter;
-    private List<Nationality> nationalityList;
+    private RecyclerView.Adapter familyListAdapter;
+    private List<FamilyPosition> familyPositions;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,18 +32,18 @@ public class NationalityListActivity extends AppCompatActivity implements View.O
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle(getResources().getString(R.string.nationalities));
+            actionBar.setTitle(getResources().getString(R.string.families));
         }
-        nationalityRecycleView = (RecyclerView) findViewById(R.id.simple_list);
+        familyRecycleView = (RecyclerView) findViewById(R.id.simple_list);
 
         layoutManager = new LinearLayoutManager(this);
-        nationalityRecycleView.setLayoutManager(layoutManager);
+        familyRecycleView.setLayoutManager(layoutManager);
 
-        nationalityList = Nationality.listAll(Nationality.class);
-        nationalityListAdapter = new NationalityListAdapter(nationalityList, this);
-        nationalityRecycleView.setAdapter(nationalityListAdapter);
+        familyPositions = FamilyPosition.listAll(FamilyPosition.class);
+        familyListAdapter = new FamilyListAdapter(familyPositions, this);
+        familyRecycleView.setAdapter(familyListAdapter);
 
-        nationalityList = Nationality.listAll(Nationality.class);
+        familyPositions = FamilyPosition.listAll(FamilyPosition.class);
 
     }
 
@@ -63,8 +62,8 @@ public class NationalityListActivity extends AppCompatActivity implements View.O
                 this.finish();
                 return true;
             case R.id.new_element:
-                Intent nationalityListIntent = new Intent(this, CreateNationalityActivity.class);
-                startActivity(nationalityListIntent);
+                Intent familyListIntent = new Intent(this, CreateFamilyActivity.class);
+                startActivity(familyListIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -72,9 +71,9 @@ public class NationalityListActivity extends AppCompatActivity implements View.O
     }
 
     private void updateAdapter() {
-        nationalityList = Nationality.listAll(Nationality.class);
-        nationalityListAdapter = new NationalityListAdapter(nationalityList, this);
-        nationalityRecycleView.setAdapter(nationalityListAdapter);
+        familyPositions = FamilyPosition.listAll(FamilyPosition.class);
+        familyListAdapter = new FamilyListAdapter(familyPositions, this);
+        familyRecycleView.setAdapter(familyListAdapter);
     }
 
     @Override
@@ -88,3 +87,4 @@ public class NationalityListActivity extends AppCompatActivity implements View.O
         updateAdapter();
     }
 }
+

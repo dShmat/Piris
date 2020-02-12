@@ -62,7 +62,7 @@ public class DisabilityListActivity extends AppCompatActivity implements View.On
             case android.R.id.home:
                 this.finish();
                 return true;
-            case R.id.new_city:
+            case R.id.new_element:
                 Intent disabilityListIntent = new Intent(this, CreateDisabilityActivity.class);
                 startActivity(disabilityListIntent);
                 return true;

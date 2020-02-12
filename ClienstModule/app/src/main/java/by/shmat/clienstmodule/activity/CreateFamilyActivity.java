@@ -11,11 +11,11 @@ import android.widget.EditText;
 import java.util.List;
 
 import by.shmat.clienstmodule.R;
-import by.shmat.clienstmodule.database.Disability;
+import by.shmat.clienstmodule.database.FamilyPosition;
 
-public class CreateDisabilityActivity extends AppCompatActivity implements View.OnClickListener {
+public class CreateFamilyActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText newDisabilityName;
+    private EditText newFamilyName;
 
     public static boolean isEmpty(String str) {
         return str == null || "".equals(str.trim());
@@ -24,46 +24,46 @@ public class CreateDisabilityActivity extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.create_disability);
+        setContentView(R.layout.create_family);
 
-        ((Button) findViewById(R.id.but_create_disability)).setOnClickListener(this);
-        newDisabilityName = (EditText) findViewById(R.id.edit_disability_name);
+        ((Button) findViewById(R.id.but_create_family)).setOnClickListener(this);
+        newFamilyName = (EditText) findViewById(R.id.edit_family_name);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle(getResources().getString(R.string.new_disability));
+            actionBar.setTitle(getResources().getString(R.string.new_family));
         }
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.but_create_disability:
-                saveDisability();
+            case R.id.but_create_family:
+                saveFamily();
                 break;
         }
     }
 
-    private void saveDisability() {
-        String name = newDisabilityName.getText().toString().trim();
+    private void saveFamily() {
+        String name = newFamilyName.getText().toString().trim();
         if (isEmpty(name))
-            newDisabilityName.setError(getResources().getString(R.string.empty_edit_field));
+            newFamilyName.setError(getResources().getString(R.string.empty_edit_field));
         else {
-            List<Disability> disabilities = Disability.listAll(Disability.class);
+            List<FamilyPosition> familyPositions = FamilyPosition.listAll(FamilyPosition.class);
             boolean flag = false;
-            for (Disability disability : disabilities) {
-                String prod = disability.getName().toLowerCase();
+            for (FamilyPosition family : familyPositions) {
+                String prod = family.getName().toLowerCase();
                 if (prod.equals(name.toLowerCase()))
                     flag = true;
             }
             if (!flag) {
-                Disability disability;
-                disability = new Disability(name);
-                disability.save();
+                FamilyPosition family;
+                family = new FamilyPosition(name);
+                family.save();
                 finish();
             } else
-                newDisabilityName.setError(getResources().getString(R.string.same_disability_err));
+                newFamilyName.setError(getResources().getString(R.string.same_family_position_err));
         }
 
     }

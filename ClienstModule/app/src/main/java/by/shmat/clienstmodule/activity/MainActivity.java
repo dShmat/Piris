@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import by.shmat.clienstmodule.R;
-import by.shmat.clienstmodule.database.Disability;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, DisabilityListActivity.class));
                 break;
             case R.id.but_go_family_position:
-                startActivity(new Intent(this, CityListActivity.class));
+                startActivity(new Intent(this, FamilyListActivity.class));
                 break;
             case R.id.but_go_nationality:
                 startActivity(new Intent(this, NationalityListActivity.class));

@@ -62,7 +62,7 @@ public class CityListActivity extends AppCompatActivity implements View.OnClickL
             case android.R.id.home:
                 this.finish();
                 return true;
-            case R.id.new_city:
+            case R.id.new_element:
                 Intent cityListIntent = new Intent(this, CreateCityActivity.class);
                 startActivity(cityListIntent);
                 return true;
