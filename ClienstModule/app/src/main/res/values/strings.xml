@@ -1,30 +1,81 @@
 <resources>
     <string name="app_name">ClientModule</string>
 
-    <string name="new_city">New City</string>
-    <string name="cities">Cities</string>
-    <string name="add_city_hint">City Name</string>
-    <string name="add_city_button">Add city</string>
-    <string name="same_city_err">There is city with same name!</string>
+    <string name="new_city">Создание города</string>
+    <string name="cities">Список городов</string>
+    <string name="add_city_hint">Название города</string>
+    <string name="add_city_button">Создать город</string>
+    <string name="same_city_err">Такой город уже имеется!</string>
 
-    <string name="new_nationality">New Nationality</string>
-    <string name="nationalities">Nationalities</string>
-    <string name="add_nationality_hint">Nationality Name</string>
-    <string name="add_nationality_button">Add nationality</string>
-    <string name="same_nationality_err">There is the same nationality!</string>
+    <string name="new_nationality">Новое гражданство</string>
+    <string name="nationalities">Список гражданств</string>
+    <string name="add_nationality_hint">Гражданство</string>
+    <string name="add_nationality_button">Создать гражданство</string>
+    <string name="same_nationality_err">Такое гражданство уже имеется!</string>
 
-    <string name="new_disability">New Disability</string>
-    <string name="disabilities">Disabilities</string>
-    <string name="add_disability_hint">Disability Name</string>
-    <string name="add_disability_button">Add disability</string>
-    <string name="same_disability_err">There is the same disability!</string>
+    <string name="new_disability">Новый диагноз</string>
+    <string name="disabilities">Инвалидность</string>
+    <string name="add_disability_hint">Название инвалидности</string>
+    <string name="add_disability_button">Добавить инвалидность</string>
+    <string name="same_disability_err">Такой диагноз уже существует!</string>
 
-    <string name="new_family">New Family</string>
-    <string name="families">Family</string>
-    <string name="add_family_hint">Family Name</string>
-    <string name="add_family_button">Add family</string>
-    <string name="same_family_position_err">There is the same family position!</string>
+    <string name="new_family">Новое СП</string>
+    <string name="families">Список СП</string>
+    <string name="add_family_hint">Семейное положение</string>
+    <string name="add_family_button">Создать СП</string>
+    <string name="same_family_position_err">Такое СП уже существуетс!</string>
 
-    <string name="empty_edit_field">Error or empty!</string>
-    <string name="add_point_menu">Add new</string>
+
+    <string name="clients">Список клиентов</string>
+    <string name="new_client">Создание клиента</string>
+    <string name="surname_tw">Фамилия:</string>
+    <string name="surname_et">Введите фамилию</string>
+    <string name="name_tw">Имя:</string>
+    <string name="name_et">Введите имя</string>
+    <string name="patronymic_tw">Отчество:</string>
+    <string name="patronymic_et">Введите отчество</string>
+    <string name="date_birth_tw">Дата рождения:</string>
+    <string name="date_birth_et">Дата</string>
+    <string name="sex_tw">Пол:</string>
+    <string name="sex_cb_1">Муж.</string>
+    <string name="sex_cb_2">Жен.</string>
+    <string name="pasport_series_number_tw">Серия и номер паспорта:</string>
+    <string name="pasport_series_et">Серия</string>
+    <string name="pasport_number_et">№</string>
+    <string name="issued_by_tw">Кем выдан:</string>
+    <string name="issued_by_et">Орган выдачи</string>
+    <string name="date_issue_tw">Дата выдачи:</string>
+    <string name="date_issue_et">Дата</string>
+    <string name="id_number_tw">Идентификационный номер:</string>
+    <string name="id_number_et">Введите номер</string>
+    <string name="birth_place_tw">Место рождения:</string>
+    <string name="birth_place_et">Город, улица</string>
+    <string name="city_actual_tw">Город факт. проживания:</string>
+    <string name="city_actual_et">Город</string>
+    <string name="address_actual_tw">Адрес факт. проживания:</string>
+    <string name="address_actual_et">Адрес</string>
+    <string name="phone_home_tw">Телефон дом:</string>
+    <string name="phone_home_et">Телефон</string>
+    <string name="phone_mobile_tw">Телефон моб:</string>
+    <string name="phone_mobile_et">Телефон</string>
+    <string name="email_tw">E-mail:</string>
+    <string name="email_et">example@gmail.com</string>
+    <string name="work_place_tw">Место работы:</string>
+    <string name="work_place_et">Компания</string>
+    <string name="position_tw">Должность:</string>
+    <string name="position_et">Должность</string>
+    <string name="address_registration_tw">Адрес прописки:</string>
+    <string name="address_registration_et">Адрес</string>
+    <string name="family_position_tw">Семейное положение:</string>
+    <string name="family_position_et">Выбрать</string>
+    <string name="nationality_tw">Гражданство:</string>
+    <string name="nationality_et">Выбрать</string>
+    <string name="disability_tw">Инвалидность:</string>
+    <string name="disability_et">Выбрать</string>
+    <string name="pensioner_tw">Пенсионер</string>
+    <string name="monthly_income_tw">Ежемесячный доход:</string>
+    <string name="monthly_income_et">$</string>
+
+    <string name="empty_edit_field">Ошибка!</string>
+    <string name="add_point_menu">Добавить</string>
 </resources>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/surname_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/surname_tw"
+                android:inputType="text"
+                android:maxLength="15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/name_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_et"
+                android:inputType="text"
+                android:maxLength="15"  />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/patronymic_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+
+            <EditText
+                android:id="@+id/edit_patronymic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/patronymic_et"
+                android:inputType="text"
+                android:maxLength="15"  />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/date_birth_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_date_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/date_birth_et"
+                android:inputType="date" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/sex_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <RadioGroup
+                android:id="@+id/sex_ch_groups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_sex_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sex_cb_1"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="8pt" />
+
+                <RadioButton
+                    android:id="@+id/rb_sex_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sex_cb_2"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="8pt" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/pasport_series_number_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_pasport_series"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:hint="@string/pasport_series_et"
+                    android:inputType="text"
+                    android:maxLength="2" />
+
+                <EditText
+                    android:id="@+id/edit_pasport_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/pasport_number_et"
+                    android:inputType="number"
+                    android:maxLength="7" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/issued_by_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_issued_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/issued_by_et"
+                android:maxLength="50"  />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/date_issue_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_date_issue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/date_issue_et" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/id_number_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_id_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/id_number_et"
+                android:maxLength="14"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/birth_place_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_birth_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/birth_place_et"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/city_actual_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_actual_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/city_actual_et" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/address_actual_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_address_actual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address_actual_et"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/phone_home_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_phone_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_home_et"
+                android:inputType="phone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/phone_mobile_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_phone_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_mobile_et"
+                android:inputType="phone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/email_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_et"
+                android:inputType="textWebEmailAddress" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/work_place_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_work_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_place_et"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/position_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/position_et"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/address_registration_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_address_registration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address_registration_et"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/family_position_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_family_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/family_position_et"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/nationality_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_nationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/nationality_et"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/disability_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_disability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/disability_et"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/checkbox_pensioner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pensioner_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/monthly_income_tw"
+                android:textColor="@android:color/background_dark"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_monthly_income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/monthly_income_et"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/button_create_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_point_menu" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

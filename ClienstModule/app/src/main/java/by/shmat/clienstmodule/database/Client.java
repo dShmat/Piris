@@ -8,6 +8,8 @@ public class Client extends SugarRecord {
 
     private String surname;
 
+    private String name;
+
     private String patronymic;
 
     private Instant birthday;
@@ -55,7 +57,7 @@ public class Client extends SugarRecord {
     public Client() {
     }
 
-    public Client(String surname, String patronymic, Instant birthday, boolean sex,
+    public Client(String surname, String name, String patronymic, Instant birthday, boolean sex,
                   String pasportSeries, String pasportNumber, String issuedBy, Instant dateIssue,
                   String idNumber, String birthPlace, City cityActual, String addressActual,
                   String phoneHome, String phoneMobile, String email, String workPlace,
@@ -63,6 +65,7 @@ public class Client extends SugarRecord {
                   Nationality nationality, Disability disability, boolean pensioner,
                   float monthlyIncome) {
         this.surname = surname;
+        this.name = name;
         this.patronymic = patronymic;
         this.birthday = birthday;
         this.sex = sex;
